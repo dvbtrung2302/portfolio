@@ -1,0 +1,28 @@
+{
+  "React Create Component": {
+    "prefix": "rcc",
+    "body": [
+      "import React from \"react\"",
+      "import clsx from 'clsx'",
+      "",
+      "import styles from \"./${TM_FILENAME_BASE}.module.scss\"",
+      "",
+      "export interface I${TM_FILENAME_BASE}Props {",
+      "  className?: string",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE} = (props: I${TM_FILENAME_BASE}Props) => {",
+      "  const { className } = props;",
+      "",
+      "  return (",
+      "    <div className={clsx(styles.root, className && className)}>",
+      "    </div>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ],
+    "scope": "typescript, typescriptreact",
+    "description": "React Create Component",
+  }
+}
