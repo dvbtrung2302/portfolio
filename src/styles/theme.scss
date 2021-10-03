@@ -4,14 +4,17 @@
   --blue: #6c6ce5;
   --white: #ffffff;
   --gray: #9c9ab3;
+  --black: #353353;
 }
 .light {
   --background-color: #f9f9ff;
   --text-color: #454360;
   --text-menu-color: #ff4c60;
+  --menu-border-right: 1px solid rgba(0, 0, 0, .05);
 }
 .dark {
   --background-color: #353353;
   --text-color: #ffffff;
   --text-menu-color: #ffd15c;
+  --menu-border-right: 1px solid hsla(0, 0%, 100%, .1);
 }

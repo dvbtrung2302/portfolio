@@ -2,7 +2,6 @@
   "React Create Component": {
     "prefix": "rcc",
     "body": [
-      "import React from \"react\"",
       "import clsx from 'clsx'",
       "",
       "import styles from \"./${TM_FILENAME_BASE}.module.scss\"",

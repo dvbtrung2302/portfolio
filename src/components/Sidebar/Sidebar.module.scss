@@ -1,0 +1,21 @@
+.root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 290px;
+
+  padding: 50px 40px 40px;
+  background-color: var(--background-color);
+  border-right: var(--menu-border-right);
+}
+.logo {
+  width: 103px;
+  img {
+    width: 100%;
+  }
+}
+.list {
+  margin: 130px 0;
+}

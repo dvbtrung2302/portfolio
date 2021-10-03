@@ -1,4 +1,3 @@
-import React from "react"
 import clsx from 'clsx'
 
 import styles from "./Demo.module.scss"
@@ -12,7 +11,7 @@ const Demo = (props: IDemoProps) => {
 
   return (
     <div className={clsx(styles.root, className && className)} data-test="demo-component">
-      Demo component
+      Demo Component
     </div>
   )
 }
