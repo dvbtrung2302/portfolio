@@ -10,7 +10,7 @@ export interface ISidebarItemProps {
 }
 
 const SidebarItem = (props: ISidebarItemProps) => {
-  const { className, id, icon, name } = props;
+  const { className, icon, name } = props;
 
   return (
     <div className={clsx(styles.root, className && className)} data-test="sidebar-item">

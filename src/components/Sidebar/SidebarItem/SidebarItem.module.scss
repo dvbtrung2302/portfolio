@@ -1,7 +1,10 @@
 .root {
   display: flex;
+  align-items: center;
+  
   font-size: 1rem;
   font-weight: 700;
+
   padding: 8px 0;
   cursor: pointer;
   &:hover {
@@ -10,10 +13,12 @@
     }
   }
   & .icon {
+    transition: all .2s ease-in-out;
     color: var(--text-menu-color);
     margin-right: 20px;
   }
   & .name {
     transition: all .2s ease-in-out;
+    color: var(--text-color);
   }
 }
