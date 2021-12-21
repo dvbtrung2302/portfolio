@@ -4,6 +4,13 @@ import { findByTestAttr } from "test/testUtils";
 import SidebarItem, { ISidebarItemProps } from "..";
 import { SIDEBAR_ITEMS } from "components/Sidebar/constants";
 
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useLocation: () => ({
+    pathname: "/testroute"
+  })
+}));
+
 const setUp = (props: ISidebarItemProps): ShallowWrapper => {
   const wrapper = shallow(<SidebarItem {...props} />)
   return wrapper;

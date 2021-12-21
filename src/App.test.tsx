@@ -30,7 +30,7 @@ test("renders correctly styles with theme mode", () => {
   const theme = {
     mode: "dark"
   }
-  const initialStore = mockStore({ theme })
+  const initialStore = mockStore({ ...store.getState(), theme })
   const wrapper: ReactWrapper = setUp(initialStore);
   const app = findByTestAttr(wrapper, "app");
   

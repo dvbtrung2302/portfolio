@@ -7,7 +7,8 @@ export interface IButtonProps {
   className?: string,
   children: ReactNode,
   type?: "submit" | "button",
-  disabled?: boolean
+  disabled?: boolean,
+  onClick?: Function
 }
 
 const Button = (props: IButtonProps) => {
@@ -15,14 +16,21 @@ const Button = (props: IButtonProps) => {
     className, 
     children, 
     type = "button", 
-    disabled = false 
+    disabled = false,
+    onClick
   } = props;
+
+  const handleClick = () => {
+    if (onClick) onClick()
+  }
 
   return (
     <button 
       className={clsx(styles.root, className && className)}
       type={type}
       disabled={disabled}
+      onClick={handleClick}
+      data-test="button"
     >
       { children }
     </button>

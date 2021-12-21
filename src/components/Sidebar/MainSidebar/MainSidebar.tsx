@@ -27,7 +27,7 @@ const MainSidebar = (props: IMainSidebarProps) => {
       <div className={styles.list} data-test="list-menu">
         {
           SIDEBAR_ITEMS.map((item: ISidebarItemProps) => 
-            <SidebarItem key={item.id} {...item} />
+            <SidebarItem key={item.link} {...item} />
           )
         }
       </div>
