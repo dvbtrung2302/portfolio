@@ -1,0 +1,25 @@
+@import "/src/styles/mixins";
+
+.root {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 290px;
+
+  padding: 40px;
+  background-color: var(--background-color);
+  border-right: var(--menu-border-right);
+  transition: all .2s ease-in-out;
+}
+.logo {
+  width: 103px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+}
+.list {
+  margin: 130px 0;
+}

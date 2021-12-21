@@ -1,0 +1,68 @@
+@import "/src/styles/mixins";
+
+.root {
+  @include responsive(sm) {
+    display: none;
+  }
+  & .header {
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    
+    display: flex;
+    align-items: center;
+    
+    padding: 40px;
+    border-bottom: var(--menu-border-right);
+    background-color: var(--background-color);
+    transition: all .2s ease-in-out;
+    & .burger {
+      cursor: pointer;
+      margin-right: 10px;
+      & .burgerLine {
+        width: 25px;
+        height: 3px;
+        border-radius: 5px;
+        background-color: var(--text-color);
+        margin: 5px;
+        transition: transform .3s, background-color .3s;
+      }
+    }
+    & .activeBurger {
+      & .burgerLine {
+        &:first-child {
+          transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-child {
+          transform: rotate(45deg) translate(-5px, -6px);
+        }
+      }
+    }
+  }
+  & .mainSidebar {
+    z-index: 2;
+    left: -100%;
+    &.activeMainSidebar {
+      left: 0;
+    }
+  }
+  & .overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .2s ease-in-out;
+
+    &.activeOverlay {
+      opacity: 0.5;
+      pointer-events: all;
+    }
+  }
+}

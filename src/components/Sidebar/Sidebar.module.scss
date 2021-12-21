@@ -1,23 +1,11 @@
-.root {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  min-height: 100vh;
-  min-width: 290px;
+@import "/src/styles/mixins";
 
-  padding: 50px 40px 40px;
-  background-color: var(--background-color);
-  border-right: var(--menu-border-right);
-  transition: all .2s ease-in-out;
-}
-.logo {
-  width: 103px;
-  cursor: pointer;
-  img {
-    width: 100%;
+.root {
+  & .mainSidebar {
+    display: none;
+
+    @include responsive(sm) {
+      display: block;
+    }
   }
-}
-.list {
-  margin: 130px 0;
 }

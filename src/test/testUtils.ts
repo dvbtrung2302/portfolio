@@ -6,4 +6,5 @@ export const findByTestAttr = (
   val: string
 ): ShallowWrapper | ReactWrapper => {
   return wrapper.find(`[data-test="${val}"]`);
-}
+} 
+
