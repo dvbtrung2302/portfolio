@@ -1,0 +1,53 @@
+.root {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  & .item {
+    position: absolute;
+    &.item1 {
+      left: 10%;
+      top: 10%;
+    }
+    &.item2 {
+      left: 25%;
+      top: 30%;
+    }
+    &.item3 {
+      left: 15%;
+      bottom: 30%;
+    }
+    &.item4 {
+      left: 10%;
+      bottom: 10%;
+    }
+    &.item5 {
+      left: 45%;
+      top: 10%;
+    }
+    &.item6 {
+      left: 40%;
+      bottom: 10%;
+    }
+    &.item7 {
+      top: 20%;
+      right: 30%;
+    }
+    &.item8 {
+      right: 30%;
+      bottom: 20%;
+    }
+    &.item9 {
+      right: 10%;
+      top: 10%;
+    }
+    &.item10 {
+      top: 45%;
+      right: 20%;
+    }
+    &.item11 {
+      bottom: 10%;
+      right: 10%;;
+    }
+  }
+}

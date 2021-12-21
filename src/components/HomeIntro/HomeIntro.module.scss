@@ -1,0 +1,13 @@
+@import "/src/styles/mixins";
+
+.root {
+  width: 100%;
+  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+  position: relative;
+
+  @include responsive(sm) {
+    height: 100vh;
+    min-height: 100vh;
+  }
+}

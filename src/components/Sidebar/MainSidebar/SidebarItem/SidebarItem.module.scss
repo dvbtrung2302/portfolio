@@ -13,12 +13,13 @@
     }
   }
   & .icon {
-    transition: all .2s ease-in-out;
+    transition: var(--transition);
+    
     color: var(--text-menu-color);
     margin-right: 20px;
   }
   & .name {
-    transition: all .2s ease-in-out;
+    transition: var(--transition);
     color: var(--text-color);
   }
 }

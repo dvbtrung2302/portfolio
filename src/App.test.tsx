@@ -34,6 +34,6 @@ test("renders correctly styles with theme mode", () => {
   const wrapper: ReactWrapper = setUp(initialStore);
   const app = findByTestAttr(wrapper, "app");
   
-  const expectedClassName = `app-theme app ${theme.mode}`;
+  const expectedClassName = `app-theme app-style app ${theme.mode}`;
   expect(app.prop("className")).toBe(expectedClassName);
 });
