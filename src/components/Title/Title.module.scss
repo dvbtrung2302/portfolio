@@ -1,0 +1,21 @@
+@import "/src/styles/mixins";
+
+.root {
+  position: relative;
+  & .title {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: 14px;
+  }
+  & .icon {
+    position: absolute;
+    top: -14px;
+
+    width: 37px;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

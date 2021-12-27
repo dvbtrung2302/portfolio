@@ -1,0 +1,30 @@
+@import "/src/styles/mixins";
+
+.root {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-color);
+  transition: var(--transition);
+
+  & .icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    width: 80px;
+    display: flex;
+    align-items: flex-start;
+  }
+  & .content {
+    & .amount {
+      font-weight: 600;
+      font-size: 1.875rem;
+      line-height: 1.1;
+    }
+    & .name {
+      font-size: 1rem;
+      font-weight: 300;
+      @include responsive(md) {
+        white-space: pre-line;
+      }
+    }
+  }
+}

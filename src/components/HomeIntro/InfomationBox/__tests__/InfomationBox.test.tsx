@@ -2,7 +2,7 @@ import { shallow, ShallowWrapper } from "enzyme";
 
 import { findByTestAttr } from "test/testUtils";
 import InfomationBox, { IInfomationBoxProps } from "..";
-import { INFO } from "components/Sidebar/constants";
+import { INFO } from "constants/global";
 
 const setUp = (props?: IInfomationBoxProps): ShallowWrapper => {
   const wrapper = shallow(<InfomationBox {...props} />)
@@ -15,11 +15,6 @@ describe("<InfomationBox /> rendering", () => {
   test("render InfomationBox without errros", () => {
     const infomationBox = findByTestAttr(wrapper, "infomation-box");
       expect(infomationBox.length).toBe(1);
-  })
-
-  test("render Avatar without errros", () => {
-    const avatar = findByTestAttr(wrapper, "avatar");
-      expect(avatar.length).toBe(1);
   })
 
   test("render Name without errros", () => {

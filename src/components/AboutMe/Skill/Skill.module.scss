@@ -1,0 +1,28 @@
+.root {
+  color: var(--text-color);
+  & .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    & .skillName {
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    & .percent {
+      font-size: 0.875rem;
+    }
+  }
+  & .progress {
+    height: 7px;
+    background-color: #f1f1f1;
+    border-radius: 15px;
+    position: relative;
+    & .progressBar {
+      position: absolute;
+      height: 100%;
+      background-color: var(--yellow);
+      border-radius: 15px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "mixins";
+
+.page {
+  padding-top: 70px;
+}
+.about {
+  @include responsive(sm) {
+    padding-top: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

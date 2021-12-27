@@ -11,12 +11,14 @@
 }
 .light {
   --background-color: #f9f9ff;
+  --box-background-color: #ffffff;
   --text-color: #454360;
   --text-menu-color: #ff4c60;
   --menu-border-right: 1px solid rgba(0, 0, 0, .05);
 }
 .dark {
   --background-color: #353353;
+  --box-background-color: #302f4e;
   --text-color: #ffffff;
   --text-menu-color: #ffd15c;
   --menu-border-right: 1px solid hsla(0, 0%, 100%, .1);
