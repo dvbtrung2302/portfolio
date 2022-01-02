@@ -1,0 +1,63 @@
+@import "/src/styles/mixins";
+
+.root {
+  width: 48%;
+  min-height: 180px;
+  padding: 20px 0;
+  margin: 0 1% 20px 1%;
+  position: relative;
+
+  background-color: var(--box-background-color);
+  transition: var(--transition);
+  box-shadow: 0 5px 20px 0 rgba(69, 67, 96, .1);
+  border-radius: 20px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  @include responsive(md) {
+    width: 23%;
+  }
+  & .image {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+  }
+  & .overlay {
+    background: var(--blue);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: all .3s ease-in-out;
+  }
+  & .name {
+    color: var(--white);
+    font-size: 1.25rem;
+    font-weight: 700;
+    
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0 0 10px;
+    padding: 0 20px;
+    
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(.075, .82, .165, 1);
+  }
+
+  &:hover {
+    & .overlay {
+      opacity: .9;
+    }
+    & .name {
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+  }
+}

@@ -40,5 +40,15 @@ export const INFO = {
     { id: 2, name: "Projects \n completed", amount: "10+", icon: "fas fa-fire" },
     { id: 3, name: "Happy \n customers", amount: "10+", icon: "fas fa-users" },
     { id: 4, name: "Awards Won", amount: "0", icon: "fas fa-award" },
+  ],
+  techSkills: [
+    { id: 1, imageSrc: "/images/skills/javascript.svg", name: "JavaScript" },
+    { id: 2, imageSrc: "/images/skills/typescript.svg", name: "TypeScript" },
+    { id: 3, imageSrc: "/images/skills/reactjs.svg", name: "ReactJS" },
+    { id: 4, imageSrc: "/images/skills/nextjs.svg", name: "NextJS" },
+    { id: 5, imageSrc: "/images/skills/html.svg", name: "HTML" },
+    { id: 6, imageSrc: "/images/skills/css.svg", name: "CSS" },
+    { id: 7, imageSrc: "/images/skills/jest.svg", name: "Jest" },
+    { id: 8, imageSrc: "/images/skills/nodejs.svg", name: "NodeJS" }
   ]
 }

@@ -11,5 +11,5 @@ const setUp = (props?: ISidebarProps): ShallowWrapper => {
 test("render <Sidebar /> without errros", () => {
   const wrapper: ShallowWrapper = setUp();
   const sidebar = findByTestAttr(wrapper, "sidebar");
-    expect(sidebar.length).toBe(1);
+  expect(sidebar.length).toBe(1);
 })

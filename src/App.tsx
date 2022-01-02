@@ -13,6 +13,7 @@ import { useAppSelector } from "hooks/useAppSelector";
 
 const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
+const Skills = lazy(() => import("./pages/Skills"));
 
 function App() {
   const theme: IInitialThemeReducerState = useAppSelector(state => state.theme);
@@ -24,6 +25,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/skills" component={Skills} />
         </Switch>
       </Suspense>
     </div>
