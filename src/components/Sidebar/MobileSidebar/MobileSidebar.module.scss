@@ -1,7 +1,7 @@
 @import "/src/styles/mixins";
 
 .root {
-  @include responsive(sm) {
+  @include responsive(md) {
     display: none;
   }
   & .header {
@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     
-    padding: 20px 40px;
+    padding: 20px 15px;
     border-bottom: var(--menu-border-right);
     background-color: var(--background-color);
     transition: var(--transition);

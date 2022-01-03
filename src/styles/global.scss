@@ -29,7 +29,7 @@ ul, li {
   transition: all .2s ease-in-out;
   padding-top: 50px;
 
-  @include responsive(sm) {
+  @include responsive(md) {
     padding-left: 289px;
     padding-top: 0;
   }

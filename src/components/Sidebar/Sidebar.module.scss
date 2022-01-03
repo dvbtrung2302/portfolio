@@ -4,7 +4,7 @@
   & .mainSidebar {
     display: none;
 
-    @include responsive(sm) {
+    @include responsive(md) {
       display: block;
     }
   }

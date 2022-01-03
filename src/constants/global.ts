@@ -50,5 +50,30 @@ export const INFO = {
     { id: 6, imageSrc: "/images/skills/css.svg", name: "CSS" },
     { id: 7, imageSrc: "/images/skills/jest.svg", name: "Jest" },
     { id: 8, imageSrc: "/images/skills/nodejs.svg", name: "NodeJS" }
+  ],
+  education: [
+    { 
+      id: 1, 
+      time: "09/2018 - Present", 
+      title: "Engineering Degree", 
+      description: "Study Information Systems at University of Information Technology VNU-HCM.", 
+      icon: "icon-graduation" 
+    },
+  ],
+  works: [
+    { 
+      id: 1, 
+      time: "04/2020 - 08/2020", 
+      title: "Freelancer", 
+      description: "Develop some projects as Freelancer Developer.",
+      icon: "icon-briefcase" 
+    },
+    { 
+      id: 2, 
+      time: "08/2020 - Present", 
+      title: "Front-End Developer", 
+      description: "Work at Kenh Giai Phap Co. as a Front-End Developer.",
+      icon: "icon-briefcase" 
+    }
   ]
 }

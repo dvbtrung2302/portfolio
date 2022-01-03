@@ -9,7 +9,7 @@
 
   background-color: var(--box-background-color);
   transition: var(--transition);
-  box-shadow: 0 5px 20px 0 rgba(69, 67, 96, .1);
+  box-shadow: var(--box-shadow);
   border-radius: 20px;
   overflow: hidden;
 
@@ -17,7 +17,7 @@
   align-items: center;
   justify-content: center;
   
-  @include responsive(md) {
+  @include responsive(sm) {
     width: 23%;
   }
   & .image {

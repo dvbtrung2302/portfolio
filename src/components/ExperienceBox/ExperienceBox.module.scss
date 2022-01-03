@@ -1,0 +1,25 @@
+@import "/src/styles/mixins";
+
+.root {
+  position: relative;
+  background-color: var(--box-background-color);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+ 
+  padding: 30px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  @include responsive(sm) {
+    width: 48%;
+    margin-bottom: 0;
+  }
+  & .line {
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 34px;
+
+    width: 1px;
+    background-color: var(--text-menu-color);
+  }
+}
