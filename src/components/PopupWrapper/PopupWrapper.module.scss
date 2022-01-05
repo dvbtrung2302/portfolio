@@ -1,0 +1,32 @@
+.root{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  &.hide {
+    width: 0;
+    height: 0;
+  }
+}
+.popup {
+  position: relative;
+  z-index: 900;
+}
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 800;
+  background-color: rgba(0, 0, 0, .7);
+}
+.activeRoot {
+  pointer-events: all;
+}

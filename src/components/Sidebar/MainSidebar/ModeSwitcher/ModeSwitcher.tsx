@@ -30,16 +30,14 @@ const ModeSwitcher = (props: IModeSwitcherProps) => {
       className={clsx(
         styles.root, 
         className && className,
-        theme.mode === "dark" && styles.darkMode
       )} 
       onClick={changeMode}
       data-test="mode-switcher"
     >
-      <div className={styles.toggle}></div>
-      <div className={styles.modes}>
-        <p className={styles.light}>Light</p>
-        <p className={styles.dark}>Dark</p>
-      </div>
+      { theme.mode !== "dark" ?
+        <i className="fas fa-sun" data-test="mode-switcher-icon"></i> :
+        <i className="fas fa-moon" data-test="mode-switcher-icon"></i> 
+      }
     </div>
   )
 }

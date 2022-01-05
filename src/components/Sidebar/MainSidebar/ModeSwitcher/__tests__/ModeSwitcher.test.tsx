@@ -35,13 +35,16 @@ test("renders correctly styles with initial mode", () => {
   expect(modeSwitcher.prop("className")).toBe(expectedClassName);
 });
 
-test("renders correctly styles when change mode", () => {
-  const wrapper: ReactWrapper = setUp();
+test("renders correctly icon when change mode", () => {
+  const theme = {
+    mode: "dark"
+  }
+  const initialStore = mockStore({ theme })
+  const wrapper: ReactWrapper = setUp(initialStore);
   const modeSwitcher = findByTestAttr(wrapper, "mode-switcher");
   modeSwitcher.simulate("click");
 
-  const updatedModeSwitcher = findByTestAttr(wrapper, "mode-switcher");
-  const expectedClassName = "root darkMode";
-
-  expect(updatedModeSwitcher.prop("className")).toBe(expectedClassName);
+  const expectedClassName = `fas fa-${theme.mode === "dark" ? "moon" : "sun"}`
+  const icon = findByTestAttr(wrapper, "mode-switcher-icon");
+  expect(icon.prop("className")).toBe(expectedClassName);
 });

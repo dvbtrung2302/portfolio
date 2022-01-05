@@ -1,0 +1,25 @@
+.root {
+  display: flex;
+  margin-top: 50px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  & .item {
+    color: var(--text-color);
+    font-style: 1rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+    margin-right: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: var(--text-menu-color);
+    }
+    &.active {
+      color: var(--text-menu-color);
+    }
+  }
+}

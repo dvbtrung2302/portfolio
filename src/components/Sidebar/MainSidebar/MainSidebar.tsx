@@ -9,11 +9,12 @@ import { SIDEBAR_ITEMS } from '../constants';
 
 export interface IMainSidebarProps {
   className?: string,
-  mode?: string
+  mode?: string,
+  closeSidebar?: Function
 }
 
 const MainSidebar = (props: IMainSidebarProps) => {
-  const { className, mode } = props;
+  const { className, mode, closeSidebar } = props;
 
   return (
     <div className={clsx(styles.root, className && className)} data-test="main-sidebar">
@@ -27,11 +28,11 @@ const MainSidebar = (props: IMainSidebarProps) => {
       <div className={styles.list} data-test="list-menu">
         {
           SIDEBAR_ITEMS.map((item: ISidebarItemProps) => 
-            <SidebarItem key={item.link} {...item} />
+            <SidebarItem key={item.link} closeSidebar={closeSidebar} {...item} />
           )
         }
       </div>
-      <ModeSwitcher />
+      <ModeSwitcher className={styles.modeSwitcher} />
     </div>
   )
 }

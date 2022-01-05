@@ -1,0 +1,25 @@
+.root {
+  position: relative;
+  & .arrow {
+    background: rgba(35, 35, 35,.65);
+    color: var(--white);
+    border-radius: 6px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+
+    font-size: 1.125rem;
+    display: inline-block;
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    &.rightArrow {
+      left: auto;
+      right: 10px;
+    }
+  }
+}

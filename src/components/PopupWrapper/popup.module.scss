@@ -1,0 +1,20 @@
+.enter {
+  transform: translate(0,-50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+.enterActive {
+  transform: translate(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+}
+.exit {
+  transform: translate(0);
+  opacity: 1;
+  transition-property: transform, opacity;
+}
+.exitActive {
+  transform: translate(0,-50px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}

@@ -15,6 +15,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const Skills = lazy(() => import("./pages/Skills"));
 const Experience = lazy(() => import("./pages/Experience"));
+const Works = lazy(() => import("./pages/Works"));
 
 function App() {
   const theme: IInitialThemeReducerState = useAppSelector(state => state.theme);
@@ -28,6 +29,7 @@ function App() {
           <Route exact path="/about" component={About} />
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/experience" component={Experience} />
+          <Route exact path="/works" component={Works} />
         </Switch>
       </Suspense>
     </div>

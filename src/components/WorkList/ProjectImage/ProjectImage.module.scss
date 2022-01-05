@@ -1,0 +1,44 @@
+.root {
+  width: 100%;
+  border: var(--menu-border-right);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  & img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+  & .bar {
+    display: flex;
+    align-items: center;
+    height: 25px;
+    padding: 0 13px;
+    border-bottom: var(--menu-border-right);
+    flex-shrink: 0;
+    & span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--dot-color);
+      margin-right: 5px;
+    }
+  }
+}
+.mobile {
+  width: 25%;
+  margin: 0 auto;
+  & .bar {  
+    & span {
+      border-radius: 10px;
+      width: 20px;
+      &:first-child {
+        margin-right: auto;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

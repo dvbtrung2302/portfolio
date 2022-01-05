@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import styles from "./MobileSidebar.module.scss"
 
 import MainSidebar from '../MainSidebar';
+import ModeSwitcher from '../MainSidebar/ModeSwitcher';
 
 export interface ISMobileSidebarProps {
   className?: string,
@@ -36,6 +37,7 @@ const MobileSidebar = (props: ISMobileSidebarProps) => {
             alt="Page Logo" 
           />
         </div>
+        <ModeSwitcher className={styles.modeSwitcher}/>
       </div>
       <div 
         className={clsx(styles.overlay, burgerClick && styles.activeOverlay)} 
@@ -45,6 +47,7 @@ const MobileSidebar = (props: ISMobileSidebarProps) => {
       <MainSidebar 
         mode={mode} 
         className={clsx(styles.mainSidebar, burgerClick && styles.activeMainSidebar)} 
+        closeSidebar={toggleBurger}
         data-test="mobile-main-sidebar"
       />
     </div>
