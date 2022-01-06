@@ -83,11 +83,15 @@
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
+    @include responsive(md) {
+      justify-content: flex-end;
+    }
     & .achievementItem {
       width: 50%;
       margin-bottom: 25px;
       @include responsive(md) {
         width: 25%;
+        margin-bottom: 0;
       }
     }
   }

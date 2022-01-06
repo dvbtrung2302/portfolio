@@ -5,6 +5,7 @@ import styles from "./MobileSidebar.module.scss"
 
 import MainSidebar from '../MainSidebar';
 import ModeSwitcher from '../MainSidebar/ModeSwitcher';
+import GithubLink from '../GithubLink';
 
 export interface ISMobileSidebarProps {
   className?: string,
@@ -38,6 +39,7 @@ const MobileSidebar = (props: ISMobileSidebarProps) => {
           />
         </div>
         <ModeSwitcher className={styles.modeSwitcher}/>
+        <GithubLink />
       </div>
       <div 
         className={clsx(styles.overlay, burgerClick && styles.activeOverlay)} 

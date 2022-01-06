@@ -5,6 +5,9 @@
   align-items: flex-start;
   color: var(--text-color);
   transition: var(--transition);
+  @include responsive(md) {
+    justify-content: center;
+  }
 
   & .icon {
     font-size: 3rem;

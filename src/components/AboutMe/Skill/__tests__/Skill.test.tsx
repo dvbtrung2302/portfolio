@@ -26,10 +26,6 @@ describe("<Skill /> rendering", () => {
     const skillName = findByTestAttr(wrapper, "skill-name");
     expect(skillName.length).toBe(1)
   })
-  test("render Skill Percent without errors", () => {
-    const skillPercent = findByTestAttr(wrapper, "skill-percent");
-    expect(skillPercent.length).toBe(1)
-  })
   test("render Skill Progress without errors", () => {
     const skillProgress = findByTestAttr(wrapper, "skill-progress");
     expect(skillProgress.length).toBe(1)

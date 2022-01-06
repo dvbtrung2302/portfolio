@@ -16,7 +16,6 @@ const Skill = (props: ISkillProps) => {
     <div className={clsx(styles.root, className && className)} data-test="skill-item">
       <div className={styles.title}>
         <p className={styles.skillName} data-test="skill-name">{skillName}</p>
-        <p className={styles.percent} data-test="skill-percent">{percent}%</p>
       </div>
       <div className={styles.progress} data-test="skill-progress">
         <div 

@@ -44,15 +44,15 @@ export const INFO = {
     },
   ],
   skills: [
-    { id: 1, name: "Web Development", percent: 90 },
-    { id: 2, name: "Back-End Development", percent: 40, color: "#ff4c60" },
-    { id: 3, name: "UI/UX Design", percent: 60, color: "#6c6ce5" },
+    { id: 1, name: "Web Development", percent: 100 },
+    { id: 2, name: "Back-End Development", percent: 100, color: "#ff4c60" },
+    { id: 3, name: "UI/UX Design", percent: 100, color: "#6c6ce5" },
   ],
   achivements: [
     { id: 1, name: "Year of \n experience", amount: "2+", icon: "fas fa-star" },
     { id: 2, name: "Projects \n completed", amount: "10+", icon: "fas fa-fire" },
     { id: 3, name: "Happy \n customers", amount: "5+", icon: "fas fa-users" },
-    { id: 4, name: "Awards Won", amount: "0", icon: "fas fa-award" },
+    // { id: 4, name: "Awards Won", amount: "0", icon: "fas fa-award" },
   ],
   techSkills: [
     { id: 1, imageSrc: "/images/skills/javascript.svg", name: "JavaScript" },

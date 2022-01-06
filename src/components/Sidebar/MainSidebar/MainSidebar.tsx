@@ -1,6 +1,7 @@
 import clsx from 'clsx'
 
 import ModeSwitcher from './ModeSwitcher';
+import GithubLink from '../GithubLink';
 import SidebarItem, { ISidebarItemProps } from './SidebarItem';
 
 import styles from "./MainSidebar.module.scss"
@@ -32,7 +33,10 @@ const MainSidebar = (props: IMainSidebarProps) => {
           )
         }
       </div>
-      <ModeSwitcher className={styles.modeSwitcher} />
+      <div className={styles.action}>
+        <ModeSwitcher className={styles.modeSwitcher} />
+        <GithubLink />
+      </div>
     </div>
   )
 }
