@@ -13,8 +13,9 @@ export const CATEGORY_TYPE: {[type: string]: string} = {
 export const INFO = {
   name: "Dang Vo Bao Trung",
   avatar: "/images/info/avatar.jpeg",
+  email: "baotrung23022000@gmail.com",
   job: "I'm a Front-End developer",
-  description: "I am Trung, web developer from Viet Nam. I have the desire to become a front‑end developer & web designer, I am passionate about building excellent website that improves the lives of those around me.",
+  description: "I am Trung, web developer from Viet Nam. I have the desire to become a front‑end developer, I am passionate about building excellent website that improves the lives of those around me.",
   socials: [
     {
       id: 1,

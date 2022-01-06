@@ -4,12 +4,26 @@
   box-shadow: var(--box-shadow);
   width: 90vw;
   max-width: 800px;
-  padding: 20px 30px;
+  padding: 30px;
   border-radius: 20px;
-  & .projectName {
-    text-align: center;
-    font-size: 2rem;
+  & .header {
     margin-bottom: 20px;
+    position: relative;
+    & .projectName {
+      text-align: center;
+      font-size: 2rem;
+    }
+    & .closeButton {
+      position: absolute;
+      top: -15px;
+      right: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: var(--transition);
+      &:hover {
+        color: var(--red);
+      }
+    }
   }
   & .imageList {
     margin-top: 20px;

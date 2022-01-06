@@ -23,7 +23,9 @@ const AboutMe = (props: IAboutMeProps) => {
         <div className={styles.mainContent}>
           <div className={styles.intro}>
             <p className={styles.text} data-test="about-me-description">{INFO.description}</p>
-            <Button data-test="download-cv-button">Download CV</Button>
+            <Button data-test="download-cv-button">
+              <a href="/cv.pdf" download="DangVoBaoTrung_CV">Download CV</a>
+            </Button>
           </div>
           <div className={styles.skillList} data-test="skill-list">
             { INFO.skills.map(item =>

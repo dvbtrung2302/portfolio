@@ -41,7 +41,7 @@ const WorkItem = (props: IWorkItemProps) => {
         isOpen={open} 
         data-test="project-detail-popup"
       >
-        <ProjectDetailPopup {...props}/>
+        <ProjectDetailPopup {...props} onClose={togglePopup} />
       </PopupWrapper>
     </div>
   )

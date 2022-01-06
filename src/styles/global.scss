@@ -9,7 +9,6 @@
 
 body {
   font-size: 16px;
-  color: #353353;
   line-height: 1.7;
   font-family: "Rubik", sans-serif;
   overflow-y: scroll;
@@ -28,9 +27,36 @@ ul, li {
   background-color: var(--background-color);
   transition: all .2s ease-in-out;
   padding-top: 50px;
+  color: var(--text-color);
 
   @include responsive(md) {
     padding-left: 289px;
     padding-top: 0;
   }
+}
+.fade-enter {
+  transform: translate(0, 50px);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  animation: hide-scroll 1.2s backwards;
+}
+.fade-enter.fade-enter-active {
+  transform: translate(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation: hide-scroll 1.2s backwards;
+}
+.fade-exit {
+  transform: translate(0);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  animation: hide-scroll 1.2s backwards;
+}
+.fade-exit.fade-exit-active {
+  transform: translate(0, 50px);
+  opacity: 0;
+  animation: hide-scroll 1.2s backwards;
+}
+@keyframes hide-scroll {
+  from, to { overflow: hidden; } 
 }

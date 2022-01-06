@@ -19,3 +19,15 @@ export interface IProject {
     type: string
   }[]
 }
+export interface IField {
+  name: string,
+  placeholder?: string,
+  disabled?: boolean,
+  type?: "text" | "email" | "password" | "textarea",
+  rows?: number,
+  cols?: number
+}
+export interface IResponse {
+  status: number,
+  message: string
+}

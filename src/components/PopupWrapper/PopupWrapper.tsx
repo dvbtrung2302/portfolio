@@ -75,14 +75,12 @@ const PopupWrapper = (props: PopupWrapperProps) => {
       }
     }
     return () => {
-      document.body.style.overflow = 'auto';
-      document.body.style.paddingRight = '0';
+      document.body.style.overflow = "";
     }
   }, [isOpen] )
 
   const onExited = () => {
-    document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = '0';
+    document.body.style.overflow = "";
     if (rootRef?.current) {
       rootRef.current.style.zIndex = "-1";
     }

@@ -48,3 +48,15 @@ describe("<ProjectDetailPopup /> rendering", () => {
     expect(projectLink.length).toBe(0)
   })
 })  
+describe("<ProjectDetailPopup /> interactions", () => {
+  let wrapper: ShallowWrapper;
+  const props = { ...INFO.projects[0], onClose: jest.fn() }
+  beforeEach(() => {
+    wrapper = setUp(props)
+  })
+  test("close popup when click close button", () => {
+    const closeButton = findByTestAttr(wrapper, "close-button");
+    closeButton.simulate("click");
+    expect(props.onClose).toHaveBeenCalled();
+  })
+})

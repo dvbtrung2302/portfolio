@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 
 export interface IProjectDetailPopupProps extends IProject {
   className?: string,
+  onClose?: Function
 }
 
 const ProjectDetailPopup = (props: IProjectDetailPopupProps) => {
@@ -17,17 +18,27 @@ const ProjectDetailPopup = (props: IProjectDetailPopupProps) => {
     technicals,
     description,
     link,
-    images 
+    images,
+    onClose
   } = props;
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     setIsOpen(true)
-  }, [])
+  }, []);
+
+  const handleClose = (): void => {
+    if (onClose) onClose();
+  }
 
   return (
     <div className={clsx(styles.root, className && className)} data-test="project-detail-popup">
-      <h2 className={styles.projectName} data-test="project-name">{name}</h2>
+      <div className={styles.header}>
+        <h2 className={styles.projectName} data-test="project-name">{name}</h2>
+        <span className={styles.closeButton} onClick={handleClose} data-test="close-button">
+          <i className="fas fa-times"></i>
+        </span>
+      </div>
       <p data-test="project-description">
         <strong>Description: </strong> {description}
       </p>

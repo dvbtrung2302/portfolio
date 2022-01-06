@@ -1,0 +1,39 @@
+.root {
+  & .field {
+    width: 100%;
+    height: 60px;
+    padding: 10px 30px;
+    outline: none;
+    border: 2px solid transparent;
+    
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    background-color: var(--white);
+    border-radius: 30px;
+  
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    &::placeholder {
+      color: var(--gray);
+    }
+    &:disabled {
+      opacity: .5;
+    }
+  }
+  &.textarea {
+    & .field {
+      height: auto;
+      font-family: "Rubik", sans-serif;
+    }
+  } 
+  & .errorMessage {
+    color: var(--red);
+    font-size: 0.75rem;
+  }
+  &.error {
+    & .field {
+      border-color: var(--red);
+    }
+  }
+}
