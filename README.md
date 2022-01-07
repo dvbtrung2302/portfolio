@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This project is used for me to introduce myself, web programming experience, the projects I have done in the past time. And used to apply Unit Test (Jest, Enzyme) to my project.
+This project is used for me to introduce myself, my web programming experience, all the projects I have done in the past time. And used to practice writing Unit Tests with Jest and Enzyme.
 
 **Check it out:** https://dvbtrung.vercel.app/
 
