@@ -1,9 +1,9 @@
-import { FormEvent, useCallback, useState } from 'react';
+import { useState } from 'react';
 import clsx from 'clsx'
 
 import { INFO } from 'constants/global';
 import { FIELD_LIST } from './constants';
-import { checkIsEmail, validateField, validateForm } from 'utils/functions';
+import { checkIsEmail } from 'utils/functions';
 import { IInitialThemeReducerState } from 'redux/reducers/themeReducer';
 import { useAppSelector } from 'hooks/useAppSelector';
 import contactApi from 'apis/contactApi';
@@ -13,27 +13,14 @@ import Spinner from 'components/Spinner';
 import Input from 'components/Input';
 
 import styles from "./ContactForm.module.scss";
+import useForm from 'hooks/useForm';
 
 interface IInitialState {
-  errors: { [type: string]: string },
-  values: { [type: string]: string },
   loading: boolean,
   successMessage: string,
 }
 
 const initialState: IInitialState = {
-  errors: {
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  },
-  values: {
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  },
   loading: false,
   successMessage: ""
 }
@@ -76,49 +63,32 @@ export interface IContactFormProps {
 const ContactForm = (props: IContactFormProps) => {
   const { className } = props;
   const [state, setState] = useState(initialState);
+  const { values, errors, handleChange, handleSubmit } = useForm({
+    initialState: {
+      errors: {
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      },
+      values: {
+        name: "",
+        email: "",
+        subject: "",
+        message: ""
+      },
+    },
+    validateSchema
+  })
   const theme: IInitialThemeReducerState = useAppSelector(state => state.theme);
 
-  const handleChange = useCallback(({name, value}) => {
-    if (validateSchema[name]) {
-      const errorMessage = validateField(validateSchema[name], value)
-      setState(prevState => ({
-        ...prevState,
-        values: {
-          ...prevState.values,
-          [name]: value
-        },
-        errors: {
-          ...prevState.errors,
-          [name]: errorMessage
-        }
-      }))
-    } else {
-      setState(prevState => ({
-        ...prevState,
-        values: {
-          ...prevState.values,
-          [name]: value
-        }
-      }))
-    }
-  }, [])
-
-  const handleSubmit = async (e: FormEvent): Promise<void> => {
-    e.preventDefault();
-    const { valid, newErrors } = validateForm(validateSchema, state.values);
-    if (!valid) {
-      setState(prevState => ({
-        ...prevState,
-        errors: newErrors
-      }))
-      return;
-    }
+  const onSubmit = async (preloadData: Function): Promise<void> => {
     try {
       setState(prevState => ({
         ...prevState,
         loading: true
       }))
-      const resp = await contactApi.contact(state.values);
+      const resp = await contactApi.contact(values);
       if (resp.status === 0) {
         alert(resp.message);
         setState(prevState => ({
@@ -128,8 +98,10 @@ const ContactForm = (props: IContactFormProps) => {
       } else {
         setState({
           ...initialState,
+          loading: false,
           successMessage: resp.message
         })
+        preloadData()
       }
     } catch (error) {
       alert(error);
@@ -157,13 +129,13 @@ const ContactForm = (props: IContactFormProps) => {
         </div>
       </div>
       <div className={styles.form}>
-        <form className={styles.formGroup} onSubmit={handleSubmit} data-test="form">
+        <form className={styles.formGroup} onSubmit={handleSubmit(onSubmit)} data-test="form">
           { FIELD_LIST.map(item =>
             <div className={styles.formControl} key={item.name} data-test="field">
               <Input 
                 {...item}
-                value={state.values[item.name]}
-                error={state.errors[item.name]}
+                value={values[item.name]}
+                error={errors[item.name]}
                 disabled={state.loading}
                 onChange={handleChange}
               />

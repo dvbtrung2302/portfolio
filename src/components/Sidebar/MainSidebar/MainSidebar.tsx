@@ -34,7 +34,7 @@ const MainSidebar = (props: IMainSidebarProps) => {
         }
       </div>
       <div className={styles.action}>
-        <ModeSwitcher className={styles.modeSwitcher} />
+        <ModeSwitcher />
         <GithubLink />
       </div>
     </div>

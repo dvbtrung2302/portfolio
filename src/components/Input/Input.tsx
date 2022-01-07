@@ -29,8 +29,8 @@ const Input = (props: IInputProps) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const value = e.target.value;
     onChange({
-      name: name,
-      value: value
+      name,
+      value
     })
   }
 

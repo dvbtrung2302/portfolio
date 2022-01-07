@@ -23,12 +23,9 @@
 .list {
   margin: 130px 0;
 }
-.modeSwitcher {
+.action {
   display: none;
   @include responsive(md) {
     display: flex;
   }
-}
-.action {
-  display: flex;
 }

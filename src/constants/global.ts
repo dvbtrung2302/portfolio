@@ -44,7 +44,7 @@ export const INFO = {
     },
   ],
   skills: [
-    { id: 1, name: "Web Development", percent: 100 },
+    { id: 1, name: "Front-End Development", percent: 100 },
     { id: 2, name: "Back-End Development", percent: 100, color: "#ff4c60" },
     { id: 3, name: "UI/UX Design", percent: 100, color: "#6c6ce5" },
   ],
