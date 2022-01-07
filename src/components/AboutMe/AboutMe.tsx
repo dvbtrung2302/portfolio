@@ -24,7 +24,7 @@ const AboutMe = (props: IAboutMeProps) => {
           <div className={styles.intro}>
             <p className={styles.text} data-test="about-me-description">{INFO.description}</p>
             <Button data-test="download-cv-button">
-              <a href="/cv.pdf" download="DangVoBaoTrung_CV">Download CV</a>
+              <a href="/DangVoBaoTrung_CV.pdf" download="DangVoBaoTrung_CV">Download CV</a>
             </Button>
           </div>
           <div className={styles.skillList} data-test="skill-list">
