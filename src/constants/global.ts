@@ -83,7 +83,7 @@ export const INFO = {
   works: [
     {
       id: 1,
-      time: "04/2020 - 08/2020",
+      time: "01/2019 - 08/2020",
       title: "Freelancer",
       description: "Develop some projects as Freelancer Developer.",
       icon: "icon-briefcase",
