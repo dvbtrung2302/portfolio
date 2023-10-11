@@ -20,7 +20,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "keen-slider": "^6.6.3",
-    "node-sass": "^6.0.1",
+    "node-sass": "^8.0.0",
     "query-string": "^7.1.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -33,7 +33,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
