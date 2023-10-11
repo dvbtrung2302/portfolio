@@ -1,8 +1,8 @@
 import clsx from "clsx";
 
-import Container from "components/Container"
+import Container from "components/Container";
 import SkillList from "components/SkillList";
-import Title from "components/Title"
+import Title from "components/Title";
 
 import styles from "styles/pages.module.scss";
 
@@ -14,7 +14,7 @@ const Skills = () => {
         <SkillList />
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
